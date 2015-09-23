@@ -1,0 +1,140 @@
+Results from experiments with detections of B-mode power, l(l+1)C_l/2pi, in uK^2.
+ 
+   Experiment        l_min  l_center   l_max      BB      sigma_BB
+BICEP2                 21       45       55     0.0087     0.0019
+BICEP2                 56       73       90     0.0133     0.0017
+BICEP2                 91      109      125     0.0150     0.0025
+BICEP2                126      144      160     0.0139     0.0037
+BICEP2                161      179      195     0.0206     0.0056
+BICEP2                196      213      230     0.0337     0.0084
+BICEP2                231      248      265     0.0507     0.0113
+BICEP2                266      283      300     0.0335     0.0174
+BICEP2                301      317      335     0.0326     0.0279
+BICEP2+Keck/Planck     21       45       55    -0.0012     0.0036
+BICEP2+Keck/Planck     56       74       90     0.0033     0.0027
+BICEP2+Keck/Planck     91      109      125     0.0070     0.0031
+BICEP2+Keck/Planck    126      144      160     0.0091     0.0039
+BICEP2+Keck/Planck    161      179      195     0.0158     0.0054
+BICEP2+Keck/Planck    196      213      230     0.0255     0.0075
+BICEP2+Keck/Planck    231      248      265     0.0206     0.0094
+BICEP2+Keck/Planck    266      283      300     0.0385     0.0133
+BICEP2+Keck/Planck    301      317      335     0.0510     0.0184
+POLARBEAR             500      700      900     0.0930     0.0560
+POLARBEAR             900     1100     1300     0.1490     0.1170
+POLARBEAR            1300     1500     1700    -0.3170     0.2360
+POLARBEAR            1700     1900     2100     0.4870     0.4820
+SPTpol                300      500      700     0.0606     0.0223
+SPTpol                700      900     1100     0.1176     0.0373
+SPTpol               1100     1300     1500     0.1594     0.0600
+SPTpol               1500     1700     1900     0.0108     0.0812
+SPTpol               1900     2100     2300    -0.1572     0.1204
+ 
+ 
+95% confidence upper limits on B-mode power, l(l+1)C_l/2pi, in uK^2.
+ 
+ Experiment          l_min   l_max    BB limit
+ACTPol                225    1075       0.655
+ACTPol               1075    2025       0.900
+ACTPol               2025    3125       2.244
+ACTPol               3125    5525       4.683
+BICEP1                 21      55       0.083
+BICEP1                 56      90       0.056
+BICEP1                 91     125       0.118
+BICEP1                126     160       0.080
+BICEP1                161     195       0.175
+BICEP1                196     230       0.326
+BICEP1                231     265       0.598
+BICEP1                266     300       1.058
+BICEP1                301     335       2.886
+BOOMERanG             101     200       6.000
+BOOMERanG             201     300       8.000
+BOOMERanG             301     400      16.900
+BOOMERanG             401     500      16.200
+BOOMERanG             501     700      18.600
+BOOMERanG             701     900      70.100
+BOOMERanG             901    1100     155.100
+CAPMAP                200     500       5.990
+CAPMAP                500     800      13.780
+CAPMAP                800    1100      26.290
+CAPMAP               1100    1400      20.160
+CAPMAP               1400    1700      65.680
+CAPMAP               1700    2000      93.370
+CAPMAP               2000    3000      55.550
+CBI                   330     500      14.200
+CBI                   500     700       5.200
+CBI                   700    1000      10.800
+CBI                  1000    1400      21.200
+CBI                  1400    5000      47.800
+DASI                   28     245       2.120
+DASI                  246     420       6.450
+DASI                  421     596      11.400
+DASI                  597     772      16.400
+DASI                  773    1050      49.300
+MAXIPOL               151     693      90.250
+QUaD                  164     244       0.852
+QUaD                  245     325       0.881
+QUaD                  326     406       2.189
+QUaD                  407     487       1.978
+QUaD                  488     568       1.395
+QUaD                  569     649       2.447
+QUaD                  650     730       3.714
+QUaD                  731     811       2.422
+QUaD                  812     892       4.637
+QUaD                  893     973       4.728
+QUaD                  974    1054       4.115
+QUaD                 1055    1135       5.217
+QUaD                 1136    1216       5.545
+QUaD                 1217    1297      10.349
+QUaD                 1298    1378       8.195
+QUaD                 1379    1459      13.494
+QUaD                 1460    1540      10.711
+QUaD                 1541    1621      18.845
+QUaD                 1622    1702      14.290
+QUaD                 1703    1783      30.891
+QUaD                 1784    1864      17.372
+QUaD                 1865    1945      21.226
+QUaD                 1946    2026      22.250
+QUIET-Q                25      75       0.110
+QUIET-Q                76     125       0.290
+QUIET-Q               126     175       0.730
+QUIET-Q               176     225       1.550
+QUIET-Q               226     275       2.750
+QUIET-Q               276     325       3.500
+QUIET-Q               326     375       2.400
+QUIET-Q               376     425       4.200
+QUIET-Q               426     475      20.900
+QUIET-W                26      75       0.190
+QUIET-W                76     125       0.550
+QUIET-W               126     175       0.230
+QUIET-W               176     225       1.090
+QUIET-W               226     275       0.520
+QUIET-W               276     325       1.000
+QUIET-W               326     375       1.500
+QUIET-W               376     425       2.500
+QUIET-W               426     475       4.400
+QUIET-W               476     525       4.000
+QUIET-W               526     575       9.200
+QUIET-W               576     625      10.500
+QUIET-W               626     675      18.300
+QUIET-W               676     725      18.000
+QUIET-W               726     775      17.000
+QUIET-W               776     825      31.000
+QUIET-W               826     875      44.000
+QUIET-W               876     925      93.000
+QUIET-W               926     975      44.000
+WMAP                    2       7       0.055
+WMAP                    8      23       0.113
+WMAP                   24      49       0.432
+WMAP                   50      99       0.299
+WMAP                  100     149       0.817
+WMAP                  150     199       1.377
+WMAP                  200     249       2.849
+WMAP                  250     299       4.677
+WMAP                  300     349       9.047
+WMAP                  350     399      21.881
+WMAP                  400     449      26.444
+WMAP                  450     499      33.004
+WMAP                  500     599      41.567
+WMAP                  600     749      95.277
+WMAP                  750     899     276.662
+WMAP                  900    1024     711.835
