@@ -1,18 +1,20 @@
 pro plot_BB_detections
 
 ; This makes a plot of observed B-mode power from CMB experiments with
-; significant detections. Data from BICEP2+Keck/Planck, POLARBEAR, and
-; SPTpol are included. The plotted BICEP2+Keck/Planck data have had the
-; dust foreground subtracted based on the measured cross-power between 
-; Planck and BICEP2+Keck. The other data plotted have not had any dust
-; foreground subtraction.
+; significant detections. Data from BICEP2+Keck October 2015, 
+; BICEP2+Keck/Planck January 2015, POLARBEAR, and SPTpol are included.
+; The plotted BICEP2+Keck data are the CMB component from a spectral 
+; decomposition into CMB, dust, and synchrotron components. The plotted 
+; BICEP2+Keck/Planck data have had the dust foreground subtracted based 
+; on the measured cross-power between Planck and BICEP2+Keck. The other
+; data plotted have not had any dust foreground subtraction.
 ; For comparison, a theoretical curve for a LCDM model with tensor-to-scalar
 ; ratio r=0.1 is also plotted as a solid curve. The inflationary and 
 ; gravitational lensing components are plotted separately as dashed
 ; and dotted curves, respectively.
 ; The data are plotted to a postscript file BB_detections.ps.
 
-; The experimental data are read from a file bb_data_2015apr.txt, which
+; The experimental data are read from a file bb_data_2015nov.txt, which
 ; should be copied to the user's local directory.
 ; Sources for the data and more information are given in 
 ; http://lambda.gsfc.nasa.gov/graphics/bb_upperlimits/
@@ -29,8 +31,8 @@ pro plot_BB_detections
 
 ; read data from experiments with BB detections
 
-readcol,'bb_data_2015apr.txt',format='A,I,I,I,F,F',experiment,$
- l_min,l_center,l_max,BB,sigma_BB,skipline=3,numline=27
+readcol,'bb_data_2015nov.txt',format='A,I,F,I,F,F,F',experiment,$
+ l_min,l_center,l_max,BB,sigma_BB_minus,sigma_bb_plus,skipline=3,numline=36
 
 set_plot,'ps'
 
@@ -49,20 +51,21 @@ plot_oo,[1.,1e+4],[1.e-2,1.e+3],ps=3,xtitle='Multipole !8l!3',$
  ytitle='!8l!3(!8l!3+1)C!d!8l!3!u!8BB!n/!32!4p  !3[!4l!3K!u2!n]',$
  yr=[1.e-3,0.6e+0],ys=1,xr=[1.,4000],xs=1,/nodata
 
+
 ; add BICEP2+Keck/Planck detections to plot
 
 s=where(experiment eq 'BICEP2+Keck/Planck')
 
-oplot,l_center(s(1:*)),bb(s(1:*)),ps=4,symsize=0.6,color=100
+oplot,l_center(s(1:*)),bb(s(1:*)),ps=4,symsize=0.6,color=70
 
-errplot,l_center(s(1:*)),bb(s(1:*))+sigma_bb(s(1:*)),$
- bb(s(1:*))-sigma_bb(s(1:*)),width=0,color=100
+errplot,l_center(s(1:*)),bb(s(1:*))+sigma_bb_plus(s(1:*)),$
+ bb(s(1:*))-sigma_bb_minus(s(1:*)),width=0,color=70
 
 l_mid=(l_min+l_max)/2.
 
 halfwidth=l_mid-l_min
 
-xerr,l_mid(s(1:*)),bb(s(1:*)),halfwidth(s(1:*)),color=100
+xerr,l_mid(s(1:*)),bb(s(1:*)),halfwidth(s(1:*)),color=70
 
 ; oplot 95% confidence upper limit for first BICEP2+Keck/Planck bin
 ;  where foreground-cleaned BB < 0
@@ -74,7 +77,7 @@ realiz=fltarr(10)
 
 for i=0,9 do begin
 
-  get_limit,bb(s(0)),sigma_bb(s(0)),0.95,limit
+  get_limit,bb(s(0)),sigma_bb_plus(s(0)),0.95,limit
 
   realiz(i) = limit
 
@@ -82,9 +85,41 @@ endfor
 
 usersym,[-1,1,0,0,-1,0,1],[0,0,0,-4.5,-3.5,-4.5,-3.5],thick=3.
 
-plots,l_center(s(0)),mean(realiz),psym=8,color=100
+plots,l_center(s(0)),mean(realiz),psym=8,color=70
 
-xerr,l_mid(s(0)),mean(realiz),halfwidth(s(0)),color=100
+xerr,l_mid(s(0)),mean(realiz),halfwidth(s(0)),color=70
+
+
+; add BICEP2+Keck Oct2015 detections to plot
+
+s=where(experiment eq 'BICEP2+Keck')
+
+oplot,l_center(s(1:*)),bb(s(1:*)),ps=4,symsize=0.6,color=100
+
+;oplot,l_center(s),bb(s),ps=4,symsize=0.6,color=100
+
+errplot,l_center(s(1:*)),bb(s(1:*))+sigma_bb_plus(s(1:*)),$
+ bb(s(1:*))-sigma_bb_minus(s(1:*)),width=0,color=100
+
+;errplot,l_center(s),bb(s)+sigma_bb_plus(s),$
+; bb(s)-sigma_bb_minus(s),width=0,color=100
+
+l_mid=(l_min+l_max)/2.
+
+halfwidth=l_mid-l_min
+
+xerr,l_mid(s(1:*)),bb(s(1:*)),halfwidth(s(1:*)),color=100
+
+;xerr,l_mid(s),bb(s),halfwidth(s),color=100
+
+; oplot 95% confidence upper limit for first BICEP2+Keck bin
+;  where CMB BB = 0
+
+usersym,[-1,1,0,0,-1,0,1],[0,0,0,-4.5,-3.5,-4.5,-3.5],thick=3.
+
+plots,l_center(s(0)),9.63e-03,psym=8,color=100
+
+xerr,l_mid(s(0)),9.63e-03,halfwidth(s(0)),color=100
 
 
 ; add Polarbear detections to plot
@@ -93,7 +128,7 @@ s = where(experiment eq 'POLARBEAR' and l_center ne 1500)
 
 oplot,l_center(s),bb(s),ps=4,symsize=0.6,color=20
 
-errplot,l_center(s),bb(s)+sigma_bb(s),bb(s)-sigma_bb(s),width=0,color=20
+errplot,l_center(s),bb(s)+sigma_bb_plus(s),bb(s)-sigma_bb_minus(s),width=0,color=20
 
 xerr,l_mid(s),bb(s),halfwidth(s),color=20
 
@@ -105,7 +140,7 @@ realiz=fltarr(10)
 
 for i=0,9 do begin
 
-  get_limit,bb(s(0)),sigma_bb(s(0)),0.95,limit
+  get_limit,bb(s(0)),sigma_bb_plus(s(0)),0.95,limit
 
   realiz(i) = limit
 
@@ -122,8 +157,8 @@ s = where(experiment eq 'SPTpol')
 
 oplot,l_center(s(0:3)),bb(s(0:3)),ps=4,symsize=0.6,color=200
 
-errplot,l_center(s(0:3)),bb(s(0:3))+sigma_bb(s(0:3)),$
- bb(s(0:3))-sigma_bb(s(0:3)),width=0,color=200
+errplot,l_center(s(0:3)),bb(s(0:3))+sigma_bb_plus(s(0:3)),$
+ bb(s(0:3))-sigma_bb_minus(s(0:3)),width=0,color=200
 
 xerr,l_mid(s(0:3)),bb(s(0:3)),halfwidth(s(0:3)),color=200
 
@@ -135,7 +170,7 @@ realiz=fltarr(10)
 
 for i=0,9 do begin
 
-  get_limit,bb(s(0)),sigma_bb(s(0)),0.95,limit
+  get_limit,bb(s(0)),sigma_bb_plus(s(0)),0.95,limit
 
   realiz(i) = limit
 
@@ -146,9 +181,10 @@ plots,l_center(s),mean(realiz),psym=8,color=200
 xerr,l_mid(s),mean(realiz),halfwidth(s),color=200
 
 
-alt_xyouts,.05,.85,'SPTpol',charsize=0.8,color=200,/log
-alt_xyouts,.05,.89,'Polarbear',charsize=0.8,color=20,/log
-alt_xyouts,.05,.93,'BICEP2+Keck/Planck',charsize=0.8,color=100,/log
+alt_xyouts,.05,.81,'SPTpol',charsize=0.8,color=200,/log
+alt_xyouts,.05,.85,'Polarbear',charsize=0.8,color=20,/log
+alt_xyouts,.05,.89,'BICEP2+Keck/Planck',charsize=0.8,color=70,/log
+alt_xyouts,.05,.93,'BICEP2+Keck',charsize=0.8,color=100,/log
 
 
 ; oplot LCDM predictions
