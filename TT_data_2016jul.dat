@@ -1,0 +1,316 @@
+Measurements of the CMB-only TT power spectrum, power is [l(l+1)]^2 C_l / 2pi in uK^2
+ 
+   Experiment            l_center     TT    sigma_TT_minus  sigma_TT_plus
+ 
+ACT                        590.5    2247.6       113.1         113.1
+ACT                        690.5    1737.0        78.5          78.5
+ACT                        790.5    2369.0        95.7          95.7
+ACT                        890.5    1922.9        74.3          74.3
+ACT                        990.5    1125.0        41.8          41.8
+ACT                       1090.5    1176.1        42.1          42.1
+ACT                       1190.5    1025.8        34.9          34.9
+ACT                       1290.5     717.5        24.8          24.8
+ACT                       1390.5     801.7        26.4          26.4
+ACT                       1490.5     654.9        21.4          21.4
+ACT                       1590.5     462.1        14.3          14.3
+ACT                       1690.5     372.8        11.4          11.4
+ACT                       1790.5     345.4        10.4          10.4
+ACT                       1890.5     243.5         8.0           8.0
+ACT                       1990.5     222.8         7.6           7.6
+ACT                       2090.5     200.8         6.7           6.7
+ACT                       2240.5     133.0         3.8           3.8
+ACT                       2440.5      91.1         3.1           3.1
+ACT                       2640.5      57.2         2.6           2.6
+ACT                       2840.5      43.7         2.5           2.5
+ACT                       3140.5      21.3         1.8           1.8
+ACT                       3540.0       9.1         1.8           1.8
+Planck COM PowerSpect        2.0     242.2       140.1         563.6
+Planck COM PowerSpect        3.0     886.2       424.2        1144.9
+Planck COM PowerSpect        4.0     728.1       307.9         697.0
+Planck COM PowerSpect        5.0    1391.6       530.0        1066.9
+Planck COM PowerSpect        6.0     542.6       191.8         357.9
+Planck COM PowerSpect        7.0    1122.7       367.3         647.2
+Planck COM PowerSpect        8.0     657.0       202.0         340.5
+Planck COM PowerSpect        9.0     649.0       191.1         310.9
+Planck COM PowerSpect       10.0     874.7       244.1         385.7
+Planck COM PowerSpect       11.0     986.0       262.2         403.9
+Planck COM PowerSpect       12.0     783.1       201.5         303.9
+Planck COM PowerSpect       13.0     678.7       168.7         250.1
+Planck COM PowerSpect       14.0     824.5       196.5         286.5
+Planck COM PowerSpect       15.0     877.4       203.1         291.8
+Planck COM PowerSpect       16.0     703.9       162.5         230.9
+Planck COM PowerSpect       17.0     881.2       193.8         272.0
+Planck COM PowerSpect       18.0     680.0       146.8         204.0
+Planck COM PowerSpect       19.0     841.8       177.6         244.4
+Planck COM PowerSpect       20.0     763.3       156.4         213.1
+Planck COM PowerSpect       21.0     670.4       136.7         184.9
+Planck COM PowerSpect       22.0     600.5       120.8         162.2
+Planck COM PowerSpect       23.0     774.0       151.0         201.3
+Planck COM PowerSpect       24.0     822.6       156.2         207.0
+Planck COM PowerSpect       25.0     848.7       160.7         211.3
+Planck COM PowerSpect       26.0     903.5       166.7         217.8
+Planck COM PowerSpect       27.0     897.5       161.8         210.5
+Planck COM PowerSpect       28.0    1142.3       201.7         261.6
+Planck COM PowerSpect       29.0    1140.0       198.3         255.5
+Planck Plik_lite            32.0    1108.7       117.7         117.7
+Planck Plik_lite            37.0    1188.2       117.3         117.3
+Planck Plik_lite            42.0    1437.5       118.3         118.3
+Planck Plik_lite            47.0    1380.1       119.8         119.8
+Planck Plik_lite            52.0    1333.3       122.2         122.2
+Planck Plik_lite            57.0    1606.1       124.5         124.5
+Planck Plik_lite            62.0    1677.5       127.6         127.6
+Planck Plik_lite            67.0    1842.7       130.9         130.9
+Planck Plik_lite            72.0    1987.1       134.5         134.5
+Planck Plik_lite            77.0    1773.1       138.4         138.4
+Planck Plik_lite            82.0    2175.4       143.1         143.1
+Planck Plik_lite            87.0    2341.9       147.5         147.5
+Planck Plik_lite            92.0    2459.5       152.5         152.5
+Planck Plik_lite            97.0    2488.0       157.3         157.3
+Planck Plik_lite           104.0    2962.4       119.7         119.7
+Planck Plik_lite           113.0    3227.5       126.5         126.5
+Planck Plik_lite           122.0    3388.5       133.7         133.7
+Planck Plik_lite           131.0    3594.2       140.7         140.7
+Planck Plik_lite           140.0    4233.4       147.5         147.5
+Planck Plik_lite           149.0    4256.0       153.3         153.3
+Planck Plik_lite           158.0    4782.1       158.8         158.8
+Planck Plik_lite           167.0    4846.0       163.6         163.6
+Planck Plik_lite           176.0    5127.4       167.0         167.0
+Planck Plik_lite           185.0    5379.6       169.2         169.2
+Planck Plik_lite           194.0    5550.8       170.3         170.3
+Planck Plik_lite           203.0    5449.3       170.2         170.2
+Planck Plik_lite           212.0    5636.3       168.5         168.5
+Planck Plik_lite           221.0    5815.2       165.5         165.5
+Planck Plik_lite           230.0    5689.5       161.3         161.3
+Planck Plik_lite           239.0    5779.7       156.2         156.2
+Planck Plik_lite           248.0    5433.8       150.0         150.0
+Planck Plik_lite           257.0    5230.8       142.6         142.6
+Planck Plik_lite           266.0    5091.7       135.0         135.0
+Planck Plik_lite           275.0    5103.4       126.5         126.5
+Planck Plik_lite           284.0    4548.6       118.0         118.0
+Planck Plik_lite           293.0    4377.3       109.1         109.1
+Planck Plik_lite           302.0    3933.8       100.3         100.3
+Planck Plik_lite           311.0    3650.9        91.6          91.6
+Planck Plik_lite           320.0    3411.0        83.2          83.2
+Planck Plik_lite           329.0    3176.7        75.4          75.4
+Planck Plik_lite           338.0    2844.6        68.1          68.1
+Planck Plik_lite           347.0    2499.1        61.5          61.5
+Planck Plik_lite           356.0    2359.3        55.6          55.6
+Planck Plik_lite           365.0    2184.5        50.6          50.6
+Planck Plik_lite           374.0    2039.5        46.5          46.5
+Planck Plik_lite           383.0    1893.0        43.1          43.1
+Planck Plik_lite           392.0    1787.9        40.8          40.8
+Planck Plik_lite           401.0    1733.1        39.1          39.1
+Planck Plik_lite           410.0    1739.6        38.2          38.2
+Planck Plik_lite           419.0    1729.8        38.0          38.0
+Planck Plik_lite           428.0    1769.2        38.3          38.3
+Planck Plik_lite           437.0    1770.1        39.0          39.0
+Planck Plik_lite           446.0    1856.9        40.1          40.1
+Planck Plik_lite           455.0    2046.1        41.4          41.4
+Planck Plik_lite           464.0    2224.6        42.8          42.8
+Planck Plik_lite           473.0    2178.9        44.2          44.2
+Planck Plik_lite           482.0    2324.9        45.5          45.5
+Planck Plik_lite           491.0    2419.8        46.7          46.7
+Planck Plik_lite           500.0    2447.7        47.8          47.8
+Planck Plik_lite           509.0    2580.0        48.4          48.4
+Planck Plik_lite           518.0    2557.3        48.8          48.8
+Planck Plik_lite           527.0    2581.8        49.0          49.0
+Planck Plik_lite           536.0    2523.7        48.8          48.8
+Planck Plik_lite           545.0    2519.6        48.1          48.1
+Planck Plik_lite           554.0    2564.1        47.4          47.4
+Planck Plik_lite           563.0    2545.2        46.2          46.2
+Planck Plik_lite           572.0    2413.7        44.9          44.9
+Planck Plik_lite           581.0    2409.5        43.4          43.4
+Planck Plik_lite           590.0    2373.2        41.8          41.8
+Planck Plik_lite           599.0    2206.1        40.2          40.2
+Planck Plik_lite           608.0    2118.8        38.5          38.5
+Planck Plik_lite           617.0    2136.2        36.9          36.9
+Planck Plik_lite           626.0    1953.4        35.4          35.4
+Planck Plik_lite           635.0    1937.7        34.1          34.1
+Planck Plik_lite           644.0    1857.6        32.9          32.9
+Planck Plik_lite           653.0    1848.9        32.1          32.1
+Planck Plik_lite           662.0    1849.7        31.4          31.4
+Planck Plik_lite           671.0    1814.8        31.0          31.0
+Planck Plik_lite           680.0    1761.0        30.8          30.8
+Planck Plik_lite           689.0    1822.5        30.9          30.9
+Planck Plik_lite           698.0    1887.0        31.3          31.3
+Planck Plik_lite           707.0    1891.3        31.8          31.8
+Planck Plik_lite           716.0    1909.2        32.4          32.4
+Planck Plik_lite           725.0    1996.2        33.3          33.3
+Planck Plik_lite           734.0    2051.3        34.2          34.2
+Planck Plik_lite           743.0    2181.4        35.1          35.1
+Planck Plik_lite           752.0    2258.6        36.1          36.1
+Planck Plik_lite           761.0    2344.8        37.0          37.0
+Planck Plik_lite           770.0    2348.2        37.7          37.7
+Planck Plik_lite           779.0    2351.7        38.4          38.4
+Planck Plik_lite           788.0    2483.3        38.8          38.8
+Planck Plik_lite           797.0    2469.0        39.1          39.1
+Planck Plik_lite           806.0    2495.1        39.3          39.3
+Planck Plik_lite           815.0    2552.4        39.1          39.1
+Planck Plik_lite           824.0    2520.8        38.8          38.8
+Planck Plik_lite           833.0    2494.2        38.3          38.3
+Planck Plik_lite           842.0    2504.6        37.4          37.4
+Planck Plik_lite           851.0    2385.8        36.4          36.4
+Planck Plik_lite           860.0    2353.3        35.3          35.3
+Planck Plik_lite           869.0    2234.2        33.9          33.9
+Planck Plik_lite           878.0    2167.9        32.5          32.5
+Planck Plik_lite           887.0    2075.7        30.9          30.9
+Planck Plik_lite           896.0    1951.0        29.3          29.3
+Planck Plik_lite           905.0    1842.7        27.7          27.7
+Planck Plik_lite           914.0    1747.8        26.1          26.1
+Planck Plik_lite           923.0    1619.5        24.6          24.6
+Planck Plik_lite           932.0    1560.7        23.1          23.1
+Planck Plik_lite           941.0    1437.1        21.7          21.7
+Planck Plik_lite           950.0    1341.0        20.4          20.4
+Planck Plik_lite           959.0    1285.2        19.3          19.3
+Planck Plik_lite           968.0    1233.2        18.3          18.3
+Planck Plik_lite           977.0    1128.8        17.6          17.6
+Planck Plik_lite           986.0    1105.1        16.9          16.9
+Planck Plik_lite           995.0    1087.3        16.4          16.4
+Planck Plik_lite          1004.0    1025.1        16.1          16.1
+Planck Plik_lite          1013.0    1078.9        16.0          16.0
+Planck Plik_lite          1022.0    1031.7        15.9          15.9
+Planck Plik_lite          1031.0    1043.5        15.9          15.9
+Planck Plik_lite          1040.0    1056.3        16.1          16.1
+Planck Plik_lite          1049.0    1080.3        16.3          16.3
+Planck Plik_lite          1058.0    1129.6        16.5          16.5
+Planck Plik_lite          1067.0    1122.2        16.8          16.8
+Planck Plik_lite          1076.0    1153.7        17.1          17.1
+Planck Plik_lite          1085.0    1217.2        17.4          17.4
+Planck Plik_lite          1094.0    1216.8        17.6          17.6
+Planck Plik_lite          1103.0    1210.0        17.7          17.7
+Planck Plik_lite          1112.0    1214.1        17.9          17.9
+Planck Plik_lite          1121.0    1247.1        17.9          17.9
+Planck Plik_lite          1130.0    1235.5        17.9          17.9
+Planck Plik_lite          1139.0    1214.7        17.8          17.8
+Planck Plik_lite          1148.0    1213.1        17.6          17.6
+Planck Plik_lite          1157.0    1220.4        17.3          17.3
+Planck Plik_lite          1166.0    1160.3        17.0          17.0
+Planck Plik_lite          1175.0    1142.0        16.7          16.7
+Planck Plik_lite          1184.0    1134.0        16.2          16.2
+Planck Plik_lite          1193.0    1085.3        15.7          15.7
+Planck Plik_lite          1202.0    1005.6        15.5          15.5
+Planck Plik_lite          1211.0     974.9        15.0          15.0
+Planck Plik_lite          1220.0     969.8        14.5          14.5
+Planck Plik_lite          1229.0     906.5        13.9          13.9
+Planck Plik_lite          1238.0     895.9        13.5          13.5
+Planck Plik_lite          1247.0     859.9        13.1          13.1
+Planck Plik_lite          1256.0     807.3        12.7          12.7
+Planck Plik_lite          1265.0     777.6        12.3          12.3
+Planck Plik_lite          1274.0     771.2        12.1          12.1
+Planck Plik_lite          1283.0     737.7        11.8          11.8
+Planck Plik_lite          1292.0     757.6        11.7          11.7
+Planck Plik_lite          1301.0     732.9        11.6          11.6
+Planck Plik_lite          1310.0     711.9        11.6          11.6
+Planck Plik_lite          1319.0     720.5        11.6          11.6
+Planck Plik_lite          1328.0     724.1        11.6          11.6
+Planck Plik_lite          1337.0     757.6        11.7          11.7
+Planck Plik_lite          1346.0     737.3        11.9          11.9
+Planck Plik_lite          1355.0     765.1        12.0          12.0
+Planck Plik_lite          1364.0     777.6        12.1          12.1
+Planck Plik_lite          1373.0     775.5        12.3          12.3
+Planck Plik_lite          1382.0     774.2        12.5          12.5
+Planck Plik_lite          1391.0     805.3        12.6          12.6
+Planck Plik_lite          1400.0     830.6        12.7          12.7
+Planck Plik_lite          1409.0     821.2        12.8          12.8
+Planck Plik_lite          1418.0     818.9        12.8          12.8
+Planck Plik_lite          1427.0     795.3        12.8          12.8
+Planck Plik_lite          1436.0     801.6        12.8          12.8
+Planck Plik_lite          1445.0     798.6        12.8          12.8
+Planck Plik_lite          1454.0     771.8        12.7          12.7
+Planck Plik_lite          1463.0     762.4        12.6          12.6
+Planck Plik_lite          1472.0     751.4        12.4          12.4
+Planck Plik_lite          1481.0     737.8        12.2          12.2
+Planck Plik_lite          1490.0     726.4        12.0          12.0
+Planck Plik_lite          1499.0     703.9        11.8          11.8
+Planck Plik_lite          1512.0     655.2         9.2           9.2
+Planck Plik_lite          1529.0     587.7         9.0           9.0
+Planck Plik_lite          1546.0     548.2         8.8           8.8
+Planck Plik_lite          1563.0     503.7         8.7           8.7
+Planck Plik_lite          1580.0     468.2         8.6           8.6
+Planck Plik_lite          1597.0     428.9         8.5           8.5
+Planck Plik_lite          1614.0     407.5         8.6           8.6
+Planck Plik_lite          1631.0     398.5         8.7           8.7
+Planck Plik_lite          1648.0     389.9         8.8           8.8
+Planck Plik_lite          1665.0     391.5         8.9           8.9
+Planck Plik_lite          1682.0     383.8         9.1           9.1
+Planck Plik_lite          1699.0     398.8         9.3           9.3
+Planck Plik_lite          1716.0     395.2         9.4           9.4
+Planck Plik_lite          1733.0     408.2         9.6           9.6
+Planck Plik_lite          1750.0     377.2         9.8           9.8
+Planck Plik_lite          1767.0     379.9         9.9           9.9
+Planck Plik_lite          1784.0     374.3        10.0          10.0
+Planck Plik_lite          1801.0     361.3        10.1          10.1
+Planck Plik_lite          1818.0     341.6        10.2          10.2
+Planck Plik_lite          1835.0     314.1        10.4          10.4
+Planck Plik_lite          1852.0     305.8        10.5          10.5
+Planck Plik_lite          1869.0     275.4        10.6          10.6
+Planck Plik_lite          1886.0     267.6        10.8          10.8
+Planck Plik_lite          1903.0     247.6        10.9          10.9
+Planck Plik_lite          1920.0     255.3        11.2          11.2
+Planck Plik_lite          1937.0     243.5        11.4          11.4
+Planck Plik_lite          1954.0     233.2        11.6          11.6
+Planck Plik_lite          1971.0     230.0        11.8          11.8
+Planck Plik_lite          1988.0     225.3        12.1          12.1
+Planck Plik_lite          2005.0     241.7        12.6          12.6
+Planck Plik_lite          2030.0     233.4        11.8          11.8
+Planck Plik_lite          2063.0     216.4        12.2          12.2
+Planck Plik_lite          2096.0     206.4        12.7          12.7
+Planck Plik_lite          2129.0     198.4        13.2          13.2
+Planck Plik_lite          2162.0     169.4        13.7          13.7
+Planck Plik_lite          2195.0     141.2        14.2          14.2
+Planck Plik_lite          2228.0     132.3        14.8          14.8
+Planck Plik_lite          2261.0     117.8        15.4          15.4
+Planck Plik_lite          2294.0     117.3        16.1          16.1
+Planck Plik_lite          2327.0     110.5        16.9          16.9
+Planck Plik_lite          2360.0     114.9        17.7          17.7
+Planck Plik_lite          2393.0     122.5        18.7          18.7
+Planck Plik_lite          2426.0      83.8        19.6          19.6
+Planck Plik_lite          2459.0      84.1        20.7          20.7
+Planck Plik_lite          2492.0      75.9        21.8          21.8
+SPT                        675.0    1781.7        75.8          75.8
+SPT                        725.0    1935.0        83.8          83.8
+SPT                        775.0    2421.3        92.7          92.7
+SPT                        825.0    2571.6        95.8          95.8
+SPT                        875.0    2156.9        78.2          78.2
+SPT                        925.0    1582.4        56.9          56.9
+SPT                        975.0    1137.7        42.2          42.2
+SPT                       1025.0    1060.9        39.1          39.1
+SPT                       1075.0    1208.3        42.8          42.8
+SPT                       1125.0    1186.1        43.1          43.1
+SPT                       1175.0    1132.9        42.5          42.5
+SPT                       1225.0     916.0        33.8          33.8
+SPT                       1275.0     762.6        27.3          27.3
+SPT                       1325.0     713.6        26.3          26.3
+SPT                       1375.0     744.8        26.3          26.3
+SPT                       1425.0     837.1        28.6          28.6
+SPT                       1475.0     708.0        24.0          24.0
+SPT                       1525.0     613.9        20.6          20.6
+SPT                       1575.0     456.6        16.5          16.5
+SPT                       1625.0     383.7        13.6          13.6
+SPT                       1675.0     378.4        13.1          13.1
+SPT                       1725.0     383.8        13.2          13.2
+SPT                       1775.0     377.5        13.1          13.1
+SPT                       1825.0     323.1        11.6          11.6
+SPT                       1875.0     262.0         9.7           9.7
+SPT                       1925.0     223.7         8.5           8.5
+SPT                       1975.0     227.7         8.8           8.8
+SPT                       2025.0     230.3         9.0           9.0
+SPT                       2075.0     214.0         8.5           8.5
+SPT                       2125.0     177.8         7.4           7.4
+SPT                       2175.0     153.6         6.6           6.6
+SPT                       2225.0     123.2         5.7           5.7
+SPT                       2275.0     117.1         5.6           5.6
+SPT                       2325.0     109.9         5.4           5.4
+SPT                       2375.0     106.0         5.5           5.5
+SPT                       2425.0      96.5         5.1           5.1
+SPT                       2475.0      80.9         4.9           4.9
+SPT                       2525.0      76.3         4.9           4.9
+SPT                       2575.0      62.4         4.5           4.5
+SPT                       2625.0      64.3         4.6           4.6
+SPT                       2675.0      61.9         4.6           4.6
+SPT                       2725.0      53.8         4.6           4.6
+SPT                       2775.0      48.6         4.6           4.6
+SPT                       2825.0      39.2         4.4           4.4
+SPT                       2875.0      33.4         4.4           4.4
+SPT                       2925.0      32.8         4.5           4.5
+SPT                       2975.0      31.1         4.6           4.6
