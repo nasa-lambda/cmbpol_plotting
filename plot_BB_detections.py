@@ -55,7 +55,7 @@ data = np.genfromtxt('bb_data_2015nov.txt', skip_header=3, max_rows=36,
 plt.plot()
 plt.xlabel(r'Multipole $\ell$', size=labsize)
 plt.ylabel(r'$\ell(\ell+1)C_\ell^\mathrm{BB}/2\pi\ \mathrm{[\mu K^2]}$',
-        size=labsize)
+           size=labsize)
 plt.xlim([1, 4e3])
 plt.ylim([1e-3, 0.6])
 plt.xscale('log')

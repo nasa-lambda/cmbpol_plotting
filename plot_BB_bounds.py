@@ -88,6 +88,6 @@ plt.text(3, 1.5*(theory_lensed['BB'][0] + 0.1*theory_inflation['BB'][0]),
 plt.legend(loc='best', fontsize=legsize)
 ax = plt.gca()
 ax.xaxis.set_major_formatter(ticker.ScalarFormatter())
-ax.tick_params(axis='y',which='minor',left='off')
+ax.tick_params(axis='y', which='minor', left='off')
 plt.savefig('BB_bounds.eps', bbox_inches='tight')
 plt.show()
