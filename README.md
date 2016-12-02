@@ -10,5 +10,5 @@ and associated routines from the IDL Astronomy User's Library,
 http://idlastro.gsfc.nasa.gov/. The routines and data files will be updated as
 new results become available.
 
-Author: Nils Odegard
-
+Data and IDL plotting: Nils Odegard (GSFC, LAMBDA)
+Python plotting: Duncan Watts (JHU)
