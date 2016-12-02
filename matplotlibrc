@@ -1,0 +1,24 @@
+text.usetex         : True
+text.latex.unicode : True 
+text.latex.preamble :  \usepackage{txfonts}, \usepackage[T1]{fontenc}
+
+# Increase the tick-mark lengths (defaults are 4 and 2)
+xtick.major.size        :   6
+ytick.major.size        :   6 
+xtick.minor.size        :   3   
+ytick.minor.size        :   3
+
+# Increase the tick-mark widths as well as the widths of lines 
+# used to draw marker edges to be consistent with the other figure
+# linewidths (defaults are all 0.5)
+xtick.major.width       :   1
+ytick.major.width       :   1
+xtick.minor.width       :   1
+ytick.minor.width       :   1
+lines.markeredgewidth   :   1
+
+# Have the legend only plot one point instead of two, turn off the 
+# frame, and reduce the space between the point and the label  
+legend.numpoints        :   1
+legend.frameon          :   False
+legend.handletextpad    :   0.3
