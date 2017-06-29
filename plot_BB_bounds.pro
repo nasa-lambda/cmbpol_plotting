@@ -10,8 +10,8 @@ pro plot_bb_bounds
 ; and dotted curves, respectively.
 ; The data are plotted to a postscript file BB_bounds.ps.
 
-; The experimental data are read from a file bb_data_2015apr.txt, which
-; should be copied to the user's local directory.
+; The experimental data are read from a file BB_data_2015nov_csv_format.dat, 
+; which should be copied to the user's local directory.
 ; Sources for the data and more information are given in 
 ; http://lambda.gsfc.nasa.gov/graphics/bb_upperlimits/
 
@@ -39,7 +39,10 @@ device,filename='BB_bounds.ps',/color,bits=8
 
 ; read and plot 95% confidence upper limits
 
-readcol,'bb_data_2015apr.txt',expt,l_min,l_max,bb_limit,format='A,I,I,F',skipline=35
+readcol,'BB_data_2015nov_csv_format.dat',expt,l_min,l_center,l_max,BB,sigma_BB_minus,$
+sigma_bb_plus,bb_limit,format='A,I,F,I,F,F,F,F',/preserve_null,delimiter=',',skipline=39
+
+for i=0,n_elements(expt)-1 do expt(i)=strtrim(expt(i))
 
 unique_list,expt,expt_uniq,expt_index
 
