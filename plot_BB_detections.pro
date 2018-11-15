@@ -1,7 +1,7 @@
 pro plot_BB_detections
 
 ; This makes a plot of observed B-mode power from CMB experiments with
-; significant detections. Data from BICEP2+Keck October 2015, 
+; significant detections. Data from BICEP2+Keck October 2018, 
 ; BICEP2+Keck/Planck January 2015, POLARBEAR, and SPTpol are included.
 ; The plotted BICEP2+Keck data are the CMB component from a spectral 
 ; decomposition into CMB, dust, and synchrotron components. The plotted 
@@ -14,7 +14,7 @@ pro plot_BB_detections
 ; and dotted curves, respectively.
 ; The data are plotted to a postscript file BB_detections.ps.
 
-; The experimental data are read from a file BB_data_2015nov_csv_format.dat,
+; The experimental data are read from a file BB_data_2018nov_csv_format.dat,
 ; which should be copied to the user's local directory.
 ; Sources for the data and more information are given in 
 ; http://lambda.gsfc.nasa.gov/graphics/bb_upperlimits/
@@ -31,7 +31,7 @@ pro plot_BB_detections
 
 ; read data from experiments with BB detections
 
-readcol,'BB_data_2015nov_csv_format.dat',experiment,l_min,l_center,l_max,BB,sigma_BB_minus,$
+readcol,'BB_data_2018nov_csv_format.dat',experiment,l_min,l_center,l_max,BB,sigma_BB_minus,$
 sigma_bb_plus,bb_limit,format='A,I,F,I,F,F,F,F',/preserve_null,delimiter=',',skipline=3,numline=36
 
 for i=0,n_elements(experiment)-1 do experiment(i)=strtrim(experiment(i))
@@ -70,7 +70,7 @@ halfwidth=l_mid-l_min
 xerr,l_mid(s(1:*)),bb(s(1:*)),halfwidth(s(1:*)),color=70
 
 ; oplot 95% confidence upper limit for first BICEP2+Keck/Planck bin
-;  where foreground-cleaned BB < 0
+;  where foreground-cleaned BB = 0
  
 ; get upper limit from Gaussian likelihood truncated at zero,
 ;  take mean of 10 realizations
@@ -126,7 +126,7 @@ xerr,l_mid(s(0)),9.63e-03,halfwidth(s(0)),color=100
 
 ; add Polarbear detections to plot
 
-s = where(experiment eq 'POLARBEAR' and l_center ne 1500)
+s = where(experiment eq 'POLARBEAR')
 
 oplot,l_center(s),bb(s),ps=4,symsize=0.6,color=20
 
@@ -134,23 +134,23 @@ errplot,l_center(s),bb(s)+sigma_bb_plus(s),bb(s)-sigma_bb_minus(s),width=0,color
 
 xerr,l_mid(s),bb(s),halfwidth(s),color=20
 
-; oplot 95% confidence upper limit for Polarbear l_center=1500 bin
-
-s = where(experiment eq 'POLARBEAR' and l_center eq 1500)
-
-realiz=fltarr(10)
-
-for i=0,9 do begin
-
-  get_limit,bb(s(0)),sigma_bb_plus(s(0)),0.95,limit
-
-  realiz(i) = limit
-
-endfor
-
-plots,l_center(s),mean(realiz),psym=8,color=20
-
-xerr,l_mid(s),mean(realiz),halfwidth(s),color=20
+;; oplot 95% confidence upper limit for Polarbear l_center=1500 bin
+;
+;s = where(experiment eq 'POLARBEAR' and l_center eq 1500)
+;
+;realiz=fltarr(10)
+;
+;for i=0,9 do begin
+;
+;  get_limit,bb(s(0)),sigma_bb_plus(s(0)),0.95,limit
+;
+;  realiz(i) = limit
+;
+;endfor
+;
+;plots,l_center(s),mean(realiz),psym=8,color=20
+;
+;xerr,l_mid(s),mean(realiz),halfwidth(s),color=20
 
 
 ; add SPTpol detections to plot
