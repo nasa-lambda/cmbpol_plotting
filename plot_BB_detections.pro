@@ -14,7 +14,7 @@ pro plot_BB_detections
 ; and dotted curves, respectively.
 ; The data are plotted to a postscript file BB_detections.ps.
 
-; The experimental data are read from a file BB_data_2018nov_csv_format.dat,
+; The experimental data are read from a file BB_data_2019oct_csv_format.dat,
 ; which should be copied to the user's local directory.
 ; Sources for the data and more information are given in 
 ; http://lambda.gsfc.nasa.gov/graphics/bb_upperlimits/
@@ -24,6 +24,9 @@ pro plot_BB_detections
 ; They should be copied to the user's local directory from
 ; http://lambda.gsfc.nasa.gov/data/suborbital/BICEP2/B2_3yr_camb_planck_lensed_uK_20140314.txt
 ; http://lambda.gsfc.nasa.gov/data/suborbital/BICEP2/B2_3yr_camb_planck_withB_uK_20140314.txt
+; October 2019 update uses lensing component predictions for Planck
+; 2018 best-fit parameters from cl_bb_planck18_lmax4000.txt, available at
+; https://github.com/nasa-lambda/cmbpol_plotting/cl_bb_planck18_lmax4000.txt
 
 ; This code calls readcol.pro and associated routines from the IDL 
 ; Astronomy User's Library, http://idlastro.gsfc.nasa.gov/
@@ -31,8 +34,8 @@ pro plot_BB_detections
 
 ; read data from experiments with BB detections
 
-readcol,'BB_data_2018nov_csv_format.dat',experiment,l_min,l_center,l_max,BB,sigma_BB_minus,$
-sigma_bb_plus,bb_limit,format='A,I,F,I,F,F,F,F',/preserve_null,delimiter=',',skipline=3,numline=36
+readcol,'BB_data_2019oct_csv_format.dat',experiment,l_min,l_center,l_max,BB,sigma_BB_minus,$
+sigma_bb_plus,bb_limit,format='A,I,F,I,F,F,F,F',/preserve_null,delimiter=',',skipline=3,numline=38
 
 for i=0,n_elements(experiment)-1 do experiment(i)=strtrim(experiment(i))
 
@@ -157,30 +160,30 @@ xerr,l_mid(s),bb(s),halfwidth(s),color=20
 
 s = where(experiment eq 'SPTpol')
 
-oplot,l_center(s(0:3)),bb(s(0:3)),ps=4,symsize=0.6,color=200
+oplot,l_center(s),bb(s),ps=4,symsize=0.6,color=200
 
-errplot,l_center(s(0:3)),bb(s(0:3))+sigma_bb_plus(s(0:3)),$
- bb(s(0:3))-sigma_bb_minus(s(0:3)),width=0,color=200
+errplot,l_center(s),bb(s)+sigma_bb_plus(s),$
+ bb(s)-sigma_bb_minus(s),width=0,color=200
 
-xerr,l_mid(s(0:3)),bb(s(0:3)),halfwidth(s(0:3)),color=200
+xerr,l_mid(s),bb(s),halfwidth(s),color=200
 
-; oplot 95% confidence upper limit for SPTpol l_center=2100 bin
-
-s = where(experiment eq 'SPTpol' and l_center eq 2100)
-
-realiz=fltarr(10)
-
-for i=0,9 do begin
-
-  get_limit,bb(s(0)),sigma_bb_plus(s(0)),0.95,limit
-
-  realiz(i) = limit
-
-endfor
-
-plots,l_center(s),mean(realiz),psym=8,color=200
-
-xerr,l_mid(s),mean(realiz),halfwidth(s),color=200
+;; oplot 95% confidence upper limit for SPTpol l_center=2100 bin
+;
+;s = where(experiment eq 'SPTpol' and l_center eq 2100)
+;
+;realiz=fltarr(10)
+;
+;for i=0,9 do begin
+;
+;  get_limit,bb(s(0)),sigma_bb_plus(s(0)),0.95,limit
+;
+;  realiz(i) = limit
+;
+;endfor
+;
+;plots,l_center(s),mean(realiz),psym=8,color=200
+;
+;xerr,l_mid(s),mean(realiz),halfwidth(s),color=200
 
 
 alt_xyouts,.05,.81,'SPTpol',charsize=0.8,color=200,/log
@@ -191,13 +194,15 @@ alt_xyouts,.05,.93,'BICEP2+Keck',charsize=0.8,color=100,/log
 
 ; oplot LCDM predictions
 
-; read BICEP2 team results for r=0.1
-
-readcol,'B2_3yr_camb_planck_lensed_uK_20140314.txt',$
- l_p1_lens,c_BB_p1_lens,format='I,X,X,X,F',skipline=14
+; read BICEP2 team results for inflationary component for r=0.1
 
 readcol,'B2_3yr_camb_planck_withB_uK_20140314.txt',$
  l_p1_inflation,c_BB_p1_inflation,format='I,X,X,X,F',skipline=14
+
+; read predictions for lensing component (r=0) for Planck 2018
+; best-fit parameters from plikHM_TTTEEE_lowl_lowE_lensing LCDM chain
+
+readcol,'cl_bb_planck18_lmax4000.txt',l_p1_lens,c_BB_p1_lens,format='I,F',skipline=2
 
 ; get theoretical spectrum for r=0.1, call it c_BB_p1
 

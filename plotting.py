@@ -12,7 +12,7 @@ class Plotting(object):
         self.data['TT'] = CMBData('TT_data_2018oct_csv_format.dat', 'TT')
         self.data['EE'] = CMBData('EE_data_2018oct_csv_format.dat', 'EE')
         self.data['TE'] = CMBData('TE_data_2018oct_csv_format.dat', 'TE')
-        self.data['BB'] = CMBData('BB_data_2018nov_csv_format.dat', 'BB')
+        self.data['BB'] = CMBData('BB_data_2019oct_csv_format.dat', 'BB')
         self.data['lensing'] = CMBData('lensing_data_2019june_csv_format.dat', '')       
         self.load_theory()
         
@@ -59,13 +59,15 @@ class Plotting(object):
         theory_lensCl = np.loadtxt('B2_3yr_camb_planck_lensed_uK_20140314.txt')
         theory_inf = np.loadtxt('B2_3yr_camb_planck_withB_uK_20140314.txt')
         tmp = np.loadtxt('base_plikHM_TT_lowTEB.minimum.theory_cl')
+        tmp2 = np.loadtxt('cl_bb_planck18_lmax4000.txt')
 
         self.theory['TT'] = np.array([theory_inf[:, 0], theory_inf[:, 1]])
         self.theory['EE'] = np.array([theory_inf[:, 0], theory_inf[:, 3]])
         self.theory['TE'] = np.array([theory_inf[:, 0], theory_inf[:, 2]])
 
         self.theory['BB-inf'] = np.array([theory_inf[:, 0], theory_inf[:, 4]])
-        self.theory['BB-lens'] = np.array([theory_lensCl[:, 0], theory_lensCl[:, 4]])
+        #self.theory['BB-lens'] = np.array([theory_lensCl[:, 0], theory_lensCl[:, 4]])
+        self.theory['BB-lens'] = np.array([tmp2[:, 0], tmp2[:, 1]])
 
         self.theory['lensing'] = np.array([tmp[:, 0], tmp[:, 5]*1e7])
 
