@@ -43,7 +43,7 @@ SPTpol             ,     1902 ,    2102.0 ,      2301 ,       0.0640 ,       0.0
 #
 #95% confidence upper limits on B-mode power, l(l+1)C_l/2pi, in uK^2.
 #
-   Experiment      ,    l_min ,  l_center ,     l_max ,       Power  ,  Sigma_minus ,   Sigma_plus ,    Upper Limit
+#   Experiment      ,    l_min ,  l_center ,     l_max ,       Power  ,  Sigma_minus ,   Sigma_plus ,    Upper Limit
 ACTPol             ,      225 ,     650.0 ,      1075 ,              ,              ,              ,        0.655
 ACTPol             ,     1075 ,    1550.0 ,      2025 ,              ,              ,              ,        0.900
 ACTPol             ,     2025 ,    2575.0 ,      3125 ,              ,              ,              ,        2.244
