@@ -19,7 +19,8 @@ class Plotting(object):
         self.degreescale = degreescale
         self.inset = inset
 
-        self.fig = plt.figure(tight_layout=True)
+        #self.fig = plt.figure(tight_layout=True)
+        self.fig = plt.figure()
 
         self.ax = self.fig.add_subplot(1, 1, 1)
         
@@ -226,7 +227,7 @@ class Plotting(object):
         '''Generate a default TT plot'''
 
         self.plot_theory('TT', 'k')
-        self.plot_measurement('Planck_Plik_lite', 'TT', color='b', label='Planck')
+        self.plot_measurement('Planck binned', 'TT', color='b', label='Planck')
         self.plot_measurement('ACTPol', 'TT', color='g')
         self.plot_measurement('SPT', 'TT', color='r')
         self.set_axes(xscale='log', yscale='log')
@@ -239,8 +240,8 @@ class Plotting(object):
         self.plot_theory('TE', 'k')
         self.plot_measurement('ACTPol_2016', 'TE', color='g', label='ACTPol 2016')
         self.plot_measurement('BICEP2/Keck_2015', 'TE', color='c', label='BICEP2/Keck 2015')
-        self.plot_measurement('Planck_2015', 'TE', color='b', label='Planck 2015')
-        self.plot_measurement('SPTpol_2015', 'TE', color='r', label='SPTPol 2015')
+        self.plot_measurement('Planck_2018', 'TE', color='b', label='Planck 2018')
+        self.plot_measurement('SPTpol_2017', 'TE', color='r', label='SPTPol 2017')
         self.plot_measurement('WMAP_2013', 'TE', color='m', label='WMAP 2013')
         self.set_axes(xscale='log', yscale='linear')
         self.xlim([2, 5000])
@@ -252,8 +253,8 @@ class Plotting(object):
         self.plot_theory('EE', 'k')
         self.plot_measurement('ACTPol_2016', 'EE', color='g', label='ACTPol 2016')
         self.plot_measurement('BICEP2/Keck_2015', 'EE', color='c', label='BICEP2/Keck 2015')
-        self.plot_measurement('Planck_2015', 'EE', color='b', label='Planck 2015')
-        self.plot_measurement('SPTpol_2015', 'EE', color='r', label='SPTPol 2016')
+        self.plot_measurement('Planck_2018', 'EE', color='b', label='Planck 2018')
+        self.plot_measurement('SPTpol_2017', 'EE', color='r', label='SPTPol 2017')
         self.plot_measurement('WMAP_2013', 'EE', color='m', label='WMAP 2013')
         self.set_axes(xscale='log', yscale='log')
         self.xlim([2, 5000])
@@ -265,7 +266,7 @@ class Plotting(object):
         self.plot_theory('lensing', 'k')
         self.plot_measurement('POLARBEAR_2014', 'lensing', color='g', label='POLARBEAR 2014')
         self.plot_measurement('ACTPol_2016', 'lensing', color='c', label='ACTPol 2016')
-        self.plot_measurement('SPTpol_2015', 'lensing', color='r', label='SPTPol 2015')
+        self.plot_measurement('SPTpol_2019', 'lensing', color='r', label='SPTPol 2019')
         self.set_axes(xscale='log', yscale='log')
         self.xlim([2, 5000])
         self.ylabel(r'$10^7 \ell (\ell+1) C_\ell / 2\pi$ ($\mu$K$^2$)')
