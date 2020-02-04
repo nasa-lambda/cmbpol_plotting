@@ -13,7 +13,7 @@ class Plotting(object):
         self.data['EE'] = CMBData('EE_data_2018oct_csv_format.dat', 'EE')
         self.data['TE'] = CMBData('TE_data_2018oct_csv_format.dat', 'TE')
         self.data['BB'] = CMBData('BB_data_2019oct_csv_format.dat', 'BB')
-        self.data['lensing'] = CMBData('lensing_data_2019june_csv_format.dat', '')       
+        self.data['lensing'] = CMBData('lensing_data_2019dec_csv_format.dat', '')
         self.load_theory()
         
         self.degreescale = degreescale
@@ -264,7 +264,7 @@ class Plotting(object):
         '''Generate a default dd plot'''
 
         self.plot_theory('lensing', 'k')
-        self.plot_measurement('POLARBEAR_2014', 'lensing', color='g', label='POLARBEAR 2014')
+        self.plot_measurement('POLARBEAR_2019', 'lensing', color='g', label='POLARBEAR 2019')
         self.plot_measurement('ACTPol_2016', 'lensing', color='c', label='ACTPol 2016')
         self.plot_measurement('SPTpol_2019', 'lensing', color='r', label='SPTPol 2019')
         self.set_axes(xscale='log', yscale='log')
