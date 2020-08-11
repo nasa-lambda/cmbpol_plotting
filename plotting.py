@@ -9,11 +9,11 @@ class Plotting(object):
 
     def __init__(self, title=None, degreescale=False, inset=False):
         self.data = {}
-        self.data['TT'] = CMBData('TT_data_2018oct_csv_format.dat', 'TT')
-        self.data['EE'] = CMBData('EE_data_2018oct_csv_format.dat', 'EE')
-        self.data['TE'] = CMBData('TE_data_2018oct_csv_format.dat', 'TE')
-        self.data['BB'] = CMBData('BB_data_2019oct_csv_format.dat', 'BB')
-        self.data['lensing'] = CMBData('lensing_data_2019dec_csv_format.dat', '')
+        self.data['TT'] = CMBData('data/TT_data_2018oct_csv_format.dat', 'TT')
+        self.data['EE'] = CMBData('data/EE_data_2018oct_csv_format.dat', 'EE')
+        self.data['TE'] = CMBData('data/TE_data_2018oct_csv_format.dat', 'TE')
+        self.data['BB'] = CMBData('data/BB_data_2020jul_csv_format.dat', 'BB')
+        self.data['lensing'] = CMBData('data/lensing_data_2019dec_csv_format.dat', '')
         self.load_theory()
         
         self.degreescale = degreescale
