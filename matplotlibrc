@@ -1,5 +1,5 @@
-text.usetex         : True
-text.latex.unicode : True 
+#text.usetex         : True
+#text.latex.unicode : True 
 text.latex.preamble :  \usepackage{txfonts}, \usepackage[T1]{fontenc}
 
 # Increase the tick-mark lengths (defaults are 4 and 2)

@@ -66,7 +66,7 @@ experiments = [r'BICEP2+Keck', r'BICEP2+Keck/Planck', r'POLARBEAR', r'SPTpol']
 colors = ['b', 'c', 'g', 'r']
 
 for c, e in zip(colors, experiments):
-    d = data[data['experiment'] == e]
+    d = data[data['experiment'] == e.encode('UTF-8')]
 
     inds = (d['BB'] > 0)
     d = d[inds]
@@ -75,7 +75,7 @@ for c, e in zip(colors, experiments):
                  xerr=[d['l_center'] - d['l_min'], d['l_max'] - d['l_center']],
                  fmt='.', label=e, color=c, capthick=0, capsize=0)
 
-    d = data[data['experiment'] == e]
+    d = data[data['experiment'] == e.encode('UTF-8')]
     inds = (d['BB'] > 0)
     d = d[~inds]
     ulim = get_limit(d['BB'], d['sigma_BB_plus'], 0.95)

@@ -59,7 +59,7 @@ for i in range(n_unique):
     for j in range(len(d['l_min'])):
         plt.plot([d['l_min'][j], d['l_max'][j]],
                  [d['BB_limit'][j], d['BB_limit'][j]],
-                 label=unique_list[i] if j == 0 else "", color=colors[i], lw=3)
+                 label=unique_list[i].decode('UTF-8') if j == 0 else "", color=colors[i], lw=3)
 
 names = ('l', 'TT', 'TE', 'EE', 'BB', 'TB', 'EB')
 formats = ('i4', 'f4', 'f4', 'f4', 'f4', 'f4', 'f4')
