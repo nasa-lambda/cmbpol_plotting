@@ -9,9 +9,9 @@ class Plotting(object):
 
     def __init__(self, title=None, degreescale=False, inset=False):
         self.data = {}
-        self.data['TT'] = CMBData('data/TT_data_2018oct_csv_format.dat', 'TT')
-        self.data['EE'] = CMBData('data/EE_data_2018oct_csv_format.dat', 'EE')
-        self.data['TE'] = CMBData('data/TE_data_2018oct_csv_format.dat', 'TE')
+        self.data['TT'] = CMBData('data/TT_data_2020aug_csv_format.dat', 'TT')
+        self.data['EE'] = CMBData('data/EE_data_2020sep_csv_format.dat', 'EE')
+        self.data['TE'] = CMBData('data/TE_data_2020aug_csv_format.dat', 'TE')
         self.data['BB'] = CMBData('data/BB_data_2020jul_csv_format.dat', 'BB')
         self.data['lensing'] = CMBData('data/lensing_data_2019dec_csv_format.dat', '')
         self.load_theory()
@@ -238,7 +238,7 @@ class Plotting(object):
         '''Generate a default TE plot'''
 
         self.plot_theory('TE', 'k')
-        self.plot_measurement('ACTPol_2016', 'TE', color='g', label='ACTPol 2016')
+        self.plot_measurement('ACTPol_2020', 'TE', color='g', label='ACTPol 2020')
         self.plot_measurement('BICEP2/Keck_2015', 'TE', color='c', label='BICEP2/Keck 2015')
         self.plot_measurement('Planck_2018', 'TE', color='b', label='Planck 2018')
         self.plot_measurement('SPTpol_2017', 'TE', color='r', label='SPTPol 2017')
@@ -251,9 +251,10 @@ class Plotting(object):
         '''Generate a default EE plot'''
 
         self.plot_theory('EE', 'k')
-        self.plot_measurement('ACTPol_2016', 'EE', color='g', label='ACTPol 2016')
+        self.plot_measurement('ACTPol_2020', 'EE', color='g', label='ACTPol 2020')
         self.plot_measurement('BICEP2/Keck_2015', 'EE', color='c', label='BICEP2/Keck 2015')
         self.plot_measurement('Planck_2018', 'EE', color='b', label='Planck 2018')
+        self.plot_measurement('POLARBEAR_2020', 'EE', color='k', label='POLARBEAR 2020')
         self.plot_measurement('SPTpol_2017', 'EE', color='r', label='SPTPol 2017')
         self.plot_measurement('WMAP_2013', 'EE', color='m', label='WMAP 2013')
         self.set_axes(xscale='log', yscale='log')
