@@ -1,16 +1,16 @@
 pro plot_bb_bounds
 
 ; Makes a B-mode power spectrum plot showing 95% confidence upper limits
-; for B-mode power from different experiments. Data from ACTPol, BICEP1, 
-; BOOMERanG, CAPMAP, CBI, DASI, MAXIPOL, QUaD, QUIET-Q, QUIET-W, and WMAP 
-; are included.
+; for B-mode power from different experiments. Data from ABS, ACTPol, 
+; BICEP1, BOOMERanG, CAPMAP, CBI, DASI, MAXIPOL, Planck, POLARBEAR, QUaD,
+; QUIET-Q, QUIET-W, SPTpol, and WMAP are included.
 ; For comparison, theoretical curves for a LCDM model with tensor-to-scalar 
 ; ratio r=0.1 and r=0.01 are also plotted as solid curves. The inflationary
 ; and gravitational lensing components are plotted separately as dashed
 ; and dotted curves, respectively.
 ; The data are plotted to a postscript file BB_bounds.ps.
 
-; The experimental data are read from a file BB_data_2020jul_csv_format.dat, 
+; The experimental data are read from a file BB_data_2021apr_csv_format.dat, 
 ; which should be copied to the user's local directory.
 ; Sources for the data and more information are given in 
 ; http://lambda.gsfc.nasa.gov/graphics/bb_upperlimits/
@@ -39,8 +39,8 @@ device,filename='BB_bounds.ps',/color,bits=8
 
 ; read and plot 95% confidence upper limits
 
-readcol,'data/BB_data_2020jul_csv_format.dat',expt,l_min,l_center,l_max,BB,sigma_BB_minus,$
-sigma_bb_plus,bb_limit,format='A,I,F,I,F,F,F,F',/preserve_null,delimiter=',',skipline=41
+readcol,'data/BB_data_2021apr_csv_format.dat',expt,l_min,l_center,l_max,BB,sigma_BB_minus,$
+sigma_bb_plus,bb_limit,format='A,I,F,I,F,F,F,F',/preserve_null,delimiter=',',skipline=45
 
 for i=0,n_elements(expt)-1 do expt(i)=strtrim(expt(i))
 
@@ -51,9 +51,9 @@ n_uniq = n_elements(expt_uniq)   ; number of experiments with upper limit data
 ; set up arrays of IDL color tables and colors to
 ;  use for the different experiments
 
-ctables=[27,12,22,12,4,12,4,12,10,12,12]
+ctables=[12,27,0,12,4,12,22,12,4,12,6,10,12,12,0]
 
-colors=[130,20,90,100,240,70,131,120,210,150,200]
+colors=[20,130,150,100,131,70,90,120,240,40,220,210,150,200,0]
 
 delta_y = (.96-.5)/n_uniq   ; separation in y for xyouts
 
