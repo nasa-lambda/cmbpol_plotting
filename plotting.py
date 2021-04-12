@@ -12,7 +12,7 @@ class Plotting(object):
         self.data['TT'] = CMBData('data/TT_data_2020aug_csv_format.dat', 'TT')
         self.data['EE'] = CMBData('data/EE_data_2021jan_csv_format.dat', 'EE')
         self.data['TE'] = CMBData('data/TE_data_2021jan_csv_format.dat', 'TE')
-        self.data['BB'] = CMBData('data/BB_data_2020jul_csv_format.dat', 'BB')
+        self.data['BB'] = CMBData('data/BB_data_2021apr_csv_format.dat', 'BB')
         self.data['lensing'] = CMBData('data/lensing_data_2019dec_csv_format.dat', '')
         self.load_theory()
         
